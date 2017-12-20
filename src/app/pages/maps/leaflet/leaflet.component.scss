@@ -10,4 +10,8 @@
     width: 100%;
     height: nb-theme(card-height-large);
   }
+
+  /deep/ .leaflet-top {
+    z-index: 998;
+  }
 }
