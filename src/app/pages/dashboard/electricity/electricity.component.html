@@ -37,8 +37,8 @@
         <span>291 <span class="caption">USD</span></span>
       </span>
 
-      <nb-select [(selected)]="type" class="type-select">
-        <nb-option *ngFor="let t of types" [value]="t">{{ t }}</nb-option>
+      <nb-select matRipple [(selected)]="type" class="type-select">
+        <nb-option matRipple *ngFor="let t of types" [value]="t">{{ t }}</nb-option>
       </nb-select>
     </nb-card-header>
 

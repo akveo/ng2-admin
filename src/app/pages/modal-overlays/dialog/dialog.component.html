@@ -3,9 +3,9 @@
     <nb-card>
       <nb-card-header>Open Dialog</nb-card-header>
       <nb-card-body>
-        <button nbButton (click)="open()">Open Dialog with component</button>
+        <button nbButton matRipple (click)="open()">Open Dialog with component</button>
 
-        <button nbButton (click)="open2(dialog)">Open Dialog with template</button>
+        <button nbButton matRipple (click)="open2(dialog)">Open Dialog with template</button>
       </nb-card-body>
     </nb-card>
   </div>
@@ -14,9 +14,9 @@
     <nb-card>
       <nb-card-header>Open Without Backdrop</nb-card-header>
       <nb-card-body>
-        <button nbButton (click)="open()">Open Dialog with backdrop</button>
+        <button nbButton matRipple (click)="open()">Open Dialog with backdrop</button>
 
-        <button nbButton (click)="openWithoutBackdrop(dialog)">Open Dialog without backdrop</button>
+        <button nbButton matRipple (click)="openWithoutBackdrop(dialog)">Open Dialog without backdrop</button>
       </nb-card-body>
     </nb-card>
   </div>
@@ -25,9 +25,9 @@
     <nb-card>
       <nb-card-header>Open Without Esc Close</nb-card-header>
       <nb-card-body>
-        <button nbButton (click)="open()">Open Dialog with esc close</button>
+        <button nbButton matRipple (click)="open()">Open Dialog with esc close</button>
 
-        <button nbButton (click)="openWithoutEscClose(dialog)">Open Dialog without esc close</button>
+        <button nbButton matRipple (click)="openWithoutEscClose(dialog)">Open Dialog without esc close</button>
       </nb-card-body>
     </nb-card>
   </div>
@@ -36,9 +36,9 @@
     <nb-card>
       <nb-card-header>Open Without Backdrop Click</nb-card-header>
       <nb-card-body>
-        <button nbButton (click)="open()">Open Dialog with backdrop click</button>
+        <button nbButton matRipple (click)="open()">Open Dialog with backdrop click</button>
 
-        <button nbButton (click)="openWithoutBackdropClick(dialog)">Open without backdrop click</button>
+        <button nbButton matRipple (click)="openWithoutBackdropClick(dialog)">Open without backdrop click</button>
       </nb-card-body>
     </nb-card>
   </div>
@@ -47,7 +47,7 @@
     <nb-card class="form-input-card">
       <nb-card-header>Return Result From Dialog</nb-card-header>
       <nb-card-body class="result-from-dialog">
-        <button nbButton (click)="open3()">Enter Name</button>
+        <button nbButton matRipple (click)="open3()">Enter Name</button>
         <br>
         <h3 class="title">Names:</h3>
         <ul>
@@ -63,7 +63,7 @@
     <nb-card-header>Template Dialog</nb-card-header>
     <nb-card-body>{{ data }}</nb-card-body>
     <nb-card-footer>
-      <button nbButton (click)="ref.close()">Close Dialog</button>
+      <button nbButton matRipple (click)="ref.close()">Close Dialog</button>
     </nb-card-footer>
   </nb-card>
 </ng-template>

@@ -11,9 +11,9 @@
 
   ngx-legend-chart,
   .period-select {
-    padding-top: 1rem;
-    @include nb-ltr(padding-left, 0.5rem);
-    @include nb-rtl(padding-right, 0.5rem);
+    margin-top: 1rem;
+    @include nb-ltr(margin-left, 0.5rem);
+    @include nb-rtl(margin-right, 0.5rem);
   }
 
   @include media-breakpoint-up(md) {

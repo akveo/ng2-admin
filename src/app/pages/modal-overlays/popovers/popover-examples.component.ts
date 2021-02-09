@@ -34,7 +34,7 @@ export class NgxPopoverTabsComponent {
         <div class="form-group">
           <textarea class="form-control" placeholder="Message"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Send</button>
+        <button matRipple type="submit" class="btn btn-primary w-100">Send</button>
       </form>
     </div>
   `,

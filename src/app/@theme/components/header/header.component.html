@@ -1,12 +1,28 @@
 <div class="header-container">
   <div class="logo-container">
-    <a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
-      <nb-icon icon="menu-2-outline"></nb-icon>
+    <a
+      href="#"
+      class="sidebar-toggle"
+      matRipple
+      [matRippleUnbounded]="true"
+      [matRippleCentered]="true"
+      (click)="toggleSidebar()"
+    >
+      <nb-icon [icon]="(materialTheme$ | async) ? 'menu-outline' : 'menu-2-outline'"></nb-icon>
     </a>
     <a class="logo" href="#" (click)="navigateHome()">ngx-<span>admin</span></a>
   </div>
-  <nb-select [selected]="currentTheme" (selectedChange)="changeTheme($event)" status="primary">
-    <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ theme.name }}</nb-option>
+  <nb-select
+    status="primary"
+    matRipple
+    [selected]="currentTheme"
+    (selectedChange)="changeTheme($event)"
+  >
+    <nb-option
+      *ngFor="let theme of themes"
+      [value]="theme.value"
+      matRipple
+    >{{ theme.name }}</nb-option>
   </nb-select>
 </div>
 
@@ -14,11 +30,32 @@
   <nb-actions size="small">
 
     <nb-action class="control-item">
-      <nb-search type="rotate-layout"></nb-search>
-    </nb-action>
-    <nb-action class="control-item" icon="email-outline"></nb-action>
-    <nb-action class="control-item" icon="bell-outline"></nb-action>
-    <nb-action class="user-action" *nbIsGranted="['view', 'user']" >
+      <nb-search
+        type="rotate-layout"
+        matRipple
+        [matRippleUnbounded]="true"
+        [matRippleCentered]="true"
+      ></nb-search></nb-action>
+    <nb-action
+      class="control-item"
+      icon="email-outline"
+      matRipple
+      [matRippleUnbounded]="true"
+      [matRippleCentered]="true"
+    ></nb-action>
+    <nb-action
+      class="control-item"
+      icon="bell-outline"
+      matRipple
+      [matRippleUnbounded]="true"
+      [matRippleCentered]="true"
+    ></nb-action>
+    <nb-action
+      class="user-action"
+      *nbIsGranted="['view', 'user']"
+      matRipple
+      [matRippleUnbounded]="true"
+      [matRippleCentered]="true">
       <nb-user [nbContextMenu]="userMenu"
                [onlyPicture]="userPictureOnly"
                [name]="user?.name"

@@ -1,6 +1,6 @@
 <nb-card-header>
-  <nb-select [selected]="selectedCurrency" (selectedChange)="changeCurrency($event)">
-    <nb-option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</nb-option>
+  <nb-select matRipple [selected]="selectedCurrency" (selectedChange)="changeCurrency($event)">
+    <nb-option matRipple *ngFor="let currency of currencies" [value]="currency">{{ currency }}</nb-option>
   </nb-select>
 </nb-card-header>
 <nb-card-body>

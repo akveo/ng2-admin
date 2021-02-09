@@ -4,7 +4,8 @@ import { NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeServ
 import { UserData } from '../../../@core/data/users';
 import { LayoutService } from '../../../@core/utils';
 import { map, takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
+import { RippleService } from '../../../@core/utils/ripple.service';
 
 @Component({
   selector: 'ngx-header',
@@ -14,6 +15,7 @@ import { Subject } from 'rxjs';
 export class HeaderComponent implements OnInit, OnDestroy {
 
   private destroy$: Subject<void> = new Subject<void>();
+  public readonly materialTheme$: Observable<boolean>;
   userPictureOnly: boolean = false;
   user: any;
 
@@ -34,18 +36,34 @@ export class HeaderComponent implements OnInit, OnDestroy {
       value: 'corporate',
       name: 'Corporate',
     },
+    {
+      value: 'material-light',
+      name: 'Material Light',
+    },
+    {
+      value: 'material-dark',
+      name: 'Material Dark',
+    },
   ];
 
   currentTheme = 'default';
 
   userMenu = [ { title: 'Profile' }, { title: 'Log out' } ];
 
-  constructor(private sidebarService: NbSidebarService,
-              private menuService: NbMenuService,
-              private themeService: NbThemeService,
-              private userService: UserData,
-              private layoutService: LayoutService,
-              private breakpointService: NbMediaBreakpointsService) {
+  public constructor(
+    private sidebarService: NbSidebarService,
+    private menuService: NbMenuService,
+    private themeService: NbThemeService,
+    private userService: UserData,
+    private layoutService: LayoutService,
+    private breakpointService: NbMediaBreakpointsService,
+    private rippleService: RippleService,
+  ) {
+    this.materialTheme$ = this.themeService.onThemeChange()
+      .pipe(map(theme => {
+        const themeName: string = theme?.name || '';
+        return themeName.startsWith('material');
+      }));
   }
 
   ngOnInit() {
@@ -68,7 +86,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
         map(({ name }) => name),
         takeUntil(this.destroy$),
       )
-      .subscribe(themeName => this.currentTheme = themeName);
+      .subscribe(themeName => {
+        this.currentTheme = themeName;
+        this.rippleService.toggle(themeName?.startsWith('material'));
+      });
   }
 
   ngOnDestroy() {

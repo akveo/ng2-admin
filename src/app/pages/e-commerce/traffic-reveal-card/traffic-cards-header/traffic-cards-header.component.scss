@@ -1,14 +1,5 @@
-@import '../../../../@theme/styles/themes';
-
-@include nb-install-component() {
-  nb-card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: nb-theme(card-header-with-select-padding-top);
-    padding-bottom: nb-theme(card-header-with-select-padding-bottom);
-
-    @include nb-ltr(padding-right, 4rem);
-    @include nb-rtl(padding-left, 4rem);
-  }
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

@@ -12,8 +12,8 @@ import { TrafficChartData } from '../../../@core/data/traffic-chart';
       <nb-card-header>
         <span>Traffic Consumption</span>
 
-        <nb-select [(selected)]="type">
-          <nb-option *ngFor="let t of types" [value]="t">{{ t }}</nb-option>
+        <nb-select matRipple [(selected)]="type">
+          <nb-option matRipple *ngFor="let t of types" [value]="t">{{ t }}</nb-option>
         </nb-select>
       </nb-card-header>
 

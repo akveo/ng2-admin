@@ -1,19 +1,7 @@
 @import '../../../../@theme/styles/themes';
 
 @include nb-install-component() {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-
-  nb-card-body {
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
   ngx-traffic-bar-chart {
-    flex: 1;
     position: relative;
 
     ::ng-deep {

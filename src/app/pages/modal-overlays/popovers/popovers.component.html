@@ -4,10 +4,10 @@
       <nb-card-header>Popover Position</nb-card-header>
       <nb-card-body>
         <p>When popover has not enough space based on the configured placement, it will adjust accordingly trying to fit the screen.</p>
-        <button nbButton status="danger" nbPopover="Hello, how are you today?" nbPopoverTrigger="hint" nbPopoverPlacement="left">Left</button>
-        <button nbButton status="danger" nbPopover="Hello, how are you today?" nbPopoverTrigger="hint" nbPopoverPlacement="top">Top</button>
-        <button nbButton status="danger" nbPopover="Hello, how are you today?" nbPopoverTrigger="hint" nbPopoverPlacement="bottom">Bottom</button>
-        <button nbButton status="danger" nbPopover="Hello, how are you today?" nbPopoverTrigger="hint" nbPopoverPlacement="right">Right</button>
+        <button nbButton matRipple status="danger" nbPopover="Hello, how are you today?" nbPopoverTrigger="hint" nbPopoverPlacement="left">Left</button>
+        <button nbButton matRipple status="danger" nbPopover="Hello, how are you today?" nbPopoverTrigger="hint" nbPopoverPlacement="top">Top</button>
+        <button nbButton matRipple status="danger" nbPopover="Hello, how are you today?" nbPopoverTrigger="hint" nbPopoverPlacement="bottom">Bottom</button>
+        <button nbButton matRipple status="danger" nbPopover="Hello, how are you today?" nbPopoverTrigger="hint" nbPopoverPlacement="right">Right</button>
       </nb-card-body>
     </nb-card>
   </div>
@@ -17,9 +17,9 @@
       <nb-card-header>Simple Popovers</nb-card-header>
       <nb-card-body>
         <p>In a simples form popover can take a string of text to render.</p>
-        <button nbButton status="success" nbPopover="Hello, how are you today?">on click</button>
-        <button nbButton status="success" nbPopover="Hello, how are you today?" nbPopoverTrigger="hover">on hover</button>
-        <button nbButton status="success" nbPopover="Hello, how are you today?" nbPopoverTrigger="hint">on hint</button>
+        <button nbButton matRipple status="success" nbPopover="Hello, how are you today?">on click</button>
+        <button nbButton matRipple status="success" nbPopover="Hello, how are you today?" nbPopoverTrigger="hover">on hover</button>
+        <button nbButton matRipple status="success" nbPopover="Hello, how are you today?" nbPopoverTrigger="hint">on hint</button>
       </nb-card-body>
     </nb-card>
   </div>
@@ -55,7 +55,7 @@
           <div class="form-group">
             <textarea class="form-control" placeholder="Message"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary w-100">Send</button>
+          <button matRipple type="submit" class="btn btn-primary w-100">Send</button>
         </form>
       </div>
     </ng-template>
@@ -76,9 +76,9 @@
       <nb-card-header>Template Popovers</nb-card-header>
       <nb-card-body>
         <p>You can pass a refference to `ng-template` to be rendered.</p>
-        <button nbButton status="warning" [nbPopover]="tabs">With tabs</button>
-        <button nbButton status="warning" [nbPopover]="form">With form</button>
-        <button nbButton status="warning" [nbPopover]="card">With card</button>
+        <button nbButton matRipple status="warning" [nbPopover]="tabs">With tabs</button>
+        <button nbButton matRipple status="warning" [nbPopover]="form">With form</button>
+        <button nbButton matRipple status="warning" [nbPopover]="card">With card</button>
       </nb-card-body>
     </nb-card>
   </div>
@@ -88,9 +88,9 @@
       <nb-card-header>Component Popovers</nb-card-header>
       <nb-card-body>
         <p>Same way popover can render any angular compnoent.</p>
-        <button nbButton status="warning" [nbPopover]="tabsComponent">With tabs</button>
-        <button nbButton status="warning" [nbPopover]="formComponent">With form</button>
-        <button nbButton status="warning" [nbPopover]="cardComponent">With card</button>
+        <button nbButton matRipple status="warning" [nbPopover]="tabsComponent">With tabs</button>
+        <button nbButton matRipple status="warning" [nbPopover]="formComponent">With form</button>
+        <button nbButton matRipple status="warning" [nbPopover]="cardComponent">With card</button>
       </nb-card-body>
     </nb-card>
   </div>
@@ -103,52 +103,52 @@
       <nb-card-body class="debounce-card">
         <p>Quickly move mouse cursor over the buttons, only the last popover will be created. It allows us to avoid excess white improving page performance.</p>
 
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
-        <button nbButton nbPopover="Popover!" nbPopoverTrigger="hint">
+        <button nbButton matRipple nbPopover="Popover!" nbPopoverTrigger="hint">
           show hint
         </button>
       </nb-card-body>

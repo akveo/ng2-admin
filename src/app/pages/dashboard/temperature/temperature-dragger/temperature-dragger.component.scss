@@ -39,25 +39,27 @@
     position: absolute;
     width: 5.25rem;
     height: 5.25rem;
-    background-color: nb-theme(card-background-color);
+    background-color: nb-theme(card-background-color) !important;
     border-radius: 50%;
     bottom: 2%;
     left: 50%;
     transform: translate(-50%, 50%);
     z-index: 2;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     border: nb-theme(divider-width) nb-theme(divider-style) nb-theme(divider-color);
 
     &.on {
-      color: nb-theme(text-hint-color);
+      color: nb-theme(color-primary-default);
     }
   }
 
   .power-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.625rem;
+    left: 50%;
+    margin-left: -0.625rem;
     font-size: 3rem;
   }
 }

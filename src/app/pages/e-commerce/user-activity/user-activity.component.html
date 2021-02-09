@@ -2,8 +2,8 @@
 
   <nb-card-header>
     <span>User Activity</span>
-    <nb-select [selected]="type" (selectedChange)="getUserActivity($event); type = $event">
-      <nb-option *ngFor="let t of types" [value]="t">{{ t }}</nb-option>
+    <nb-select matRipple [selected]="type" (selectedChange)="getUserActivity($event); type = $event">
+      <nb-option matRipple *ngFor="let t of types" [value]="t">{{ t }}</nb-option>
     </nb-select>
   </nb-card-header>
 

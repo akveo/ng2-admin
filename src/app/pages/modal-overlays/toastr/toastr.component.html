@@ -8,8 +8,8 @@
       <div class="col-md-6 col-sm-12">
         <div class="form-group">
           <label class="label">Position:</label>
-          <nb-select [(selected)]="position" class="position-select">
-            <nb-option *ngFor="let p of positions" [value]="p">{{ p }}</nb-option>
+          <nb-select [(selected)]="position" matRipple class="position-select">
+            <nb-option *ngFor="let p of positions"  [value]="p" matRipple>{{ p }}</nb-option>
           </nb-select>
         </div>
 
@@ -34,8 +34,8 @@
       <div class="col-md-6 col-sm-12">
         <div class="form-group">
           <label class="label">Toast type:</label>
-          <nb-select [(selected)]="status">
-            <nb-option *ngFor="let t of types" [value]="t">{{ t }}</nb-option>
+          <nb-select [(selected)]="status" matRipple>
+            <nb-option *ngFor="let t of types" [value]="t" matRipple>{{ t }}</nb-option>
           </nb-select>
         </div>
 
@@ -53,7 +53,7 @@
   </nb-card-body>
 
   <nb-card-footer>
-    <button nbButton (click)="makeToast()">Show toast</button>
-    <button nbButton status="success" (click)="openRandomToast()">Random toast</button>
+    <button nbButton matRipple (click)="makeToast()">Show toast</button>
+    <button nbButton matRipple status="success" (click)="openRandomToast()">Random toast</button>
   </nb-card-footer>
 </nb-card>

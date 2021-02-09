@@ -10,8 +10,10 @@
         </div>
         <input type="password" nbInput fullWidth placeholder="Password">
         <input type="text" nbInput fullWidth shape="rectangle" placeholder="Rectangle border">
-        <input type="text" nbInput fullWidth shape="semi-round" placeholder="Semi-round border">
-        <input type="text" nbInput fullWidth shape="round" placeholder="Rounded border">
+        <ng-container *ngIf="!(materialTheme$ | async)">
+          <input type="text" nbInput fullWidth shape="semi-round" placeholder="Semi-round border">
+          <input type="text" nbInput fullWidth shape="round" placeholder="Rounded border">
+        </ng-container>
         <input type="text" nbInput fullWidth placeholder="Disabled input" disabled/>
         <textarea rows="5" nbInput fullWidth shape="round"  placeholder="Text Area"></textarea>
         <input type="text" nbInput fullWidth fieldSize="small"  placeholder="Small Input">
@@ -26,9 +28,9 @@
     <nb-card>
       <nb-card-header>Select</nb-card-header>
       <nb-card-body>
-        <nb-select selected="1">
-          <nb-option value="1">Option 1</nb-option>
-          <nb-option value="2">Option 2</nb-option>
+        <nb-select matRipple selected="1">
+          <nb-option matRipple value="1">Option 1</nb-option>
+          <nb-option matRipple value="2">Option 2</nb-option>
         </nb-select>
       </nb-card-body>
     </nb-card>
@@ -83,5 +85,10 @@
         </div>
       </nb-card-body>
     </nb-card>
+  </div>
+</div>
+<div *ngIf="showMaterialInputs" class="row">
+  <div class="col-lg-12">
+    <ngx-material-inputs></ngx-material-inputs>
   </div>
 </div>

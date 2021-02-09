@@ -3,7 +3,7 @@
 
     <nb-tab tabTitle="Contacts">
       <nb-list>
-        <nb-list-item class="contact" *ngFor="let c of contacts">
+        <nb-list-item matRipple class="contact" *ngFor="let c of contacts">
           <nb-user [picture]="c.user.picture" [name]="c.user.name" [title]="c.type" size="large"></nb-user>
           <nb-icon icon="phone-outline" pack="eva"></nb-icon>
         </nb-list-item>
@@ -12,7 +12,7 @@
 
     <nb-tab tabTitle="Recent">
       <nb-list>
-        <nb-list-item class="contact" *ngFor="let c of recent">
+        <nb-list-item matRipple class="contact" *ngFor="let c of recent">
           <nb-user [picture]="c.user.picture" [name]="c.user.name" [title]="c.type" size="large"></nb-user>
           <span class="caption">{{ c.time | date: 'shortTime' }}</span>
         </nb-list-item>

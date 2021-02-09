@@ -22,7 +22,7 @@
   <div class="grid-container">
 
     <div class="single-view" *ngIf="isSingleView">
-      <div class="camera" [style.background-image]="'url(' + selectedCamera.source + ')'">
+      <div class="camera single" [style.background-image]="'url(' + selectedCamera.source + ')'">
         <span class="camera-name">{{ selectedCamera.title }}</span>
       </div>
     </div>
@@ -40,19 +40,19 @@
 
   <nb-card-footer>
     <nb-actions [size]="actionSize" fullWidth>
-      <nb-action>
+      <nb-action matRipple>
         <nb-icon icon="pause-circle-outline" pack="eva"></nb-icon>
         Pause
       </nb-action>
-      <nb-action>
+      <nb-action matRipple>
         <nb-icon icon="list-outline" pack="eva"></nb-icon>
         Logs
       </nb-action>
-      <nb-action>
+      <nb-action matRipple>
         <nb-icon icon="search-outline" pack="eva"></nb-icon>
         Search
       </nb-action>
-      <nb-action>
+      <nb-action matRipple>
         <nb-icon icon="settings-2-outline" pack="eva"></nb-icon>
         Setup
       </nb-action>

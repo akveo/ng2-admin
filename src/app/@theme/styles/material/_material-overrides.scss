@@ -1,0 +1,44 @@
+@mixin material-overrides() {
+  @include nb-for-themes(material-dark, material-light) {
+    nb-layout-header {
+      nb-actions, .logo-container {
+        nb-icon, .user-name {
+          color: nb-theme(color-basic-100) !important;
+        }
+      }
+  
+      .select-button {
+        background-color: nb-theme(background-basic-color-3) !important;
+      }
+    }
+
+    nb-sidebar {
+      transition: width 0.3s;
+
+      .main-container {
+        transition: width 0.3s;
+      }
+    }
+
+    nb-card {
+      border-bottom-left-radius: 0.125rem;
+      border-bottom-right-radius: 0.125rem;
+
+      nb-card-header, .tabset {
+        background-color: nb-theme(card-divider-color);
+      }
+    }
+
+    [nbinput] {
+      font-weight: 400;
+
+      &.status-basic:focus:hover {
+        border-color: nb-theme(color-primary-focus) !important;
+      }
+    }
+
+    [nbbutton] {
+      box-shadow: none !important;
+    }
+  }
+}

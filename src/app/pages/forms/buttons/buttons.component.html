@@ -4,10 +4,10 @@
       <nb-card-header>Hero Buttons</nb-card-header>
       <nb-card-body>
         <div class="buttons-row">
-          <button *ngFor="let status of statuses" nbButton [status]="status" hero>
+          <button *ngFor="let status of statuses" nbButton matRipple [status]="status" hero>
             {{ status }}
           </button>
-          <button disabled nbButton hero>
+          <button disabled nbButton matRipple hero>
             disabled
           </button>
         </div>
@@ -18,10 +18,10 @@
       <nb-card-header>Default Buttons</nb-card-header>
       <nb-card-body>
         <div class="buttons-row">
-          <button *ngFor="let status of statuses" nbButton [status]="status">
+          <button *ngFor="let status of statuses" nbButton matRipple [status]="status">
             {{ status }}
           </button>
-          <button disabled nbButton>
+          <button disabled nbButton matRipple>
             disabled
           </button>
         </div>
@@ -32,10 +32,10 @@
       <nb-card-header>Outline Buttons</nb-card-header>
       <nb-card-body>
         <div class="buttons-row">
-          <button *ngFor="let status of statuses" nbButton [status]="status" outline>
+          <button *ngFor="let status of statuses" nbButton matRipple [status]="status" outline>
             {{ status }}
           </button>
-          <button disabled nbButton outline>
+          <button disabled nbButton matRipple outline>
             disabled
           </button>
         </div>
@@ -46,10 +46,10 @@
       <nb-card-header>Ghost Buttons</nb-card-header>
       <nb-card-body>
         <div class="buttons-row">
-          <button *ngFor="let status of statuses" nbButton [status]="status" ghost>
+          <button *ngFor="let status of statuses" nbButton matRipple [status]="status" ghost>
             {{ status }}
           </button>
-          <button disabled nbButton outline>
+          <button disabled nbButton matRipple outline>
             disabled
           </button>
         </div>
@@ -62,7 +62,7 @@
       <nb-card-header>Button shapes</nb-card-header>
       <nb-card-body>
         <div class="buttons-row">
-          <button *ngFor="let shape of shapes" nbButton [shape]="shape">
+          <button *ngFor="let shape of shapes" nbButton matRipple [shape]="shape">
             {{ shape }}
           </button>
         </div>
@@ -73,7 +73,7 @@
       <nb-card-header>Button sizes</nb-card-header>
       <nb-card-body>
         <div class="buttons-row">
-          <button *ngFor="let size of sizes" nbButton [size]="size">
+          <button *ngFor="let size of sizes" nbButton matRipple [size]="size">
             {{ size }}
           </button>
         </div>
@@ -86,13 +86,13 @@
       <nb-card-header>Action Groups</nb-card-header>
       <nb-card-body>
         <nb-actions size="medium">
-          <nb-action icon="menu-outline"></nb-action>
-          <nb-action icon="search-outline"></nb-action>
-          <nb-action icon="email-outline"></nb-action>
+          <nb-action matRipple icon="menu-outline"></nb-action>
+          <nb-action matRipple icon="search-outline"></nb-action>
+          <nb-action matRipple icon="email-outline"></nb-action>
           <nb-action disabled icon="bell-outline"></nb-action><nb-action>
-          <nb-user name="Han Solo"></nb-user>
+          <nb-user matRipple name="Han Solo"></nb-user>
         </nb-action>
-          <nb-action icon="settings-2-outline"></nb-action>
+          <nb-action matRipple icon="settings-2-outline"></nb-action>
         </nb-actions>
       </nb-card-body>
     </nb-card>
@@ -100,23 +100,29 @@
     <nb-card>
       <nb-card-body>
         <nb-actions size="medium" fullWidth>
-          <nb-action>
+          <nb-action matRipple>
             <nb-icon class="action-icon" icon="pause-circle-outline"></nb-icon>
             <span>Pause</span>
           </nb-action>
-          <nb-action>
+          <nb-action matRipple>
             <nb-icon class="action-icon" icon="list-outline"></nb-icon>
             <span>Logs</span>
           </nb-action>
-          <nb-action>
+          <nb-action matRipple>
             <nb-icon class="action-icon" icon="search-outline"></nb-icon>
             <span>Search</span>
           </nb-action>
-          <nb-action>
+          <nb-action matRipple>
             <nb-icon class="action-icon" icon="settings-2-outline"></nb-icon>
             <span>Setup</span>
           </nb-action>
         </nb-actions>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card *ngIf="materialTheme$ | async">
+      <nb-card-body>
+        <ngx-material-buttons></ngx-material-buttons>
       </nb-card-body>
     </nb-card>
   </div>

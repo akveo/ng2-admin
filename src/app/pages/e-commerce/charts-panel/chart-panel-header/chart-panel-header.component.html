@@ -1,7 +1,7 @@
 <ngx-legend-chart [legendItems]="chartLegend"></ngx-legend-chart>
 
-<nb-select class="period-select" [selected]="type" (selectedChange)="changePeriod($event)">
-  <nb-option *ngFor="let period of types" [value]="period">
+<nb-select matRipple class="period-select" [selected]="type" (selectedChange)="changePeriod($event)">
+  <nb-option matRipple *ngFor="let period of types" [value]="period">
     {{ period }}
   </nb-option>
 </nb-select>

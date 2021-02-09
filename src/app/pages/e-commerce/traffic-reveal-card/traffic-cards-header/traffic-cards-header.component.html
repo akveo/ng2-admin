@@ -1,6 +1,4 @@
-<nb-card-header>
-  <span>Traffic</span>
-  <nb-select [selected]="type" (selectedChange)="changePeriod($event)">
-    <nb-option *ngFor="let period of types" [value]="period">{{ period }}</nb-option>
-  </nb-select>
-</nb-card-header>
+<span>Traffic</span>
+<nb-select matRipple [selected]="type" (selectedChange)="changePeriod($event)">
+  <nb-option matRipple *ngFor="let period of types" [value]="period">{{ period }}</nb-option>
+</nb-select>

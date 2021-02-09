@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+.input-example {
+  display: block;
+  margin-top: 1rem;
+
+  label, mat-radio-button {
+    margin-right: 1rem;
+  }
+
+  textarea {
+    min-height: 3rem;
+  }
+}

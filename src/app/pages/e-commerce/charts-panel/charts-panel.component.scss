@@ -6,6 +6,10 @@ $legend-canceled-color: #3f4fda;
 
 @include nb-install-component() {
 
+  nb-card {
+    overflow: hidden;
+  }
+
   nb-tabset {
     display: flex;
     flex-direction: column;

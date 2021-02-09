@@ -1,15 +1,23 @@
 <nb-reveal-card [showToggleButton]="false" [revealed]="revealed">
   <nb-card-front>
     <nb-card size="small">
-      <ngx-traffic-cards-header [type]="period" (periodChange)="setPeriodAngGetData($event)"></ngx-traffic-cards-header>
+      <nb-card-header>
+        <ngx-traffic-cards-header [type]="period" (periodChange)="setPeriodAngGetData($event)">
+        </ngx-traffic-cards-header>
+      </nb-card-header>
       <ngx-traffic-front-card [frontCardData]="trafficListData"></ngx-traffic-front-card>
       <nb-icon class="toggle-icon" icon="chevron-up-outline" pack="eva" (click)="toggleView()"></nb-icon>
     </nb-card>
   </nb-card-front>
   <nb-card-back>
     <nb-card size="small">
-      <ngx-traffic-cards-header [type]="period" (periodChange)="setPeriodAngGetData($event)"></ngx-traffic-cards-header>
-      <ngx-traffic-back-card [trafficBarData]="trafficBarData"></ngx-traffic-back-card>
+      <nb-card-header>
+        <ngx-traffic-cards-header [type]="period" (periodChange)="setPeriodAngGetData($event)">
+        </ngx-traffic-cards-header>
+      </nb-card-header>
+      <nb-card-body>
+        <ngx-traffic-back-card [trafficBarData]="trafficBarData"></ngx-traffic-back-card>
+      </nb-card-body>
       <nb-icon class="toggle-icon" icon="chevron-down-outline" pack="eva" (click)="toggleView()"></nb-icon>
     </nb-card>
   </nb-card-back>

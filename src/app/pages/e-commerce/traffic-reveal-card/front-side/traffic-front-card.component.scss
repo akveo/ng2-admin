@@ -3,7 +3,11 @@
 @import '../../../../@theme/styles/themes';
 
 @include nb-install-component() {
-  overflow: auto;
+  overflow: hidden;
+
+  nb-list {
+    height: 100%;
+  }
 
   .item {
     display: flex;
