@@ -81,7 +81,7 @@ This project runs its tests on multiple desktop and mobile browsers using [Brows
 ### How can I support developers?
 - Star our GitHub repo :star:
 - Create pull requests, submit bugs, suggest new features or documentation updates :wrench:
-- Follow us on [Twitter](https://twitter.com/akveo_inc) :feet:
+- Follow us on [Twitter](https://twitter.com/akveo) :feet:
 - Like our page on [Facebook](https://www.facebook.com/akveo/) :thumbsup:
 
 ### Looking for engineering services? 
