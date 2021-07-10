@@ -40,7 +40,7 @@ export class DashboardComponent implements OnDestroy {
     type: 'warning',
   };
 
-  statusCards: string;
+  statusCards: CardSettings[];
 
   commonStatusCardsSet: CardSettings[] = [
     this.lightCard,
