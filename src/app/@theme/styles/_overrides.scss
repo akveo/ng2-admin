@@ -8,4 +8,9 @@
       right: 0.41rem !important;
     }
   }
+  
+  nb-search button:focus {
+    background-color: transparent !important;
+    border-color: transparent !important;
+  }
 }
