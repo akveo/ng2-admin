@@ -14,22 +14,22 @@ export class ECommerceVisitorsAnalyticsComponent implements OnDestroy {
   private alive = true;
 
   pieChartValue: number;
-  chartLegend: {iconColor: string; title: string}[];
+  chartLegend: { iconColor: string; title: string }[];
   visitorsAnalyticsData: { innerLine: number[]; outerLine: OutlineData[]; };
 
   constructor(private themeService: NbThemeService,
-              private visitorsAnalyticsChartService: VisitorsAnalyticsData) {
+    private visitorsAnalyticsChartService: VisitorsAnalyticsData) {
     this.themeService.getJsTheme()
       .pipe(takeWhile(() => this.alive))
       .subscribe(theme => {
         this.setLegendItems(theme.variables.visitorsLegend);
       });
 
-    forkJoin(
+    forkJoin([
       this.visitorsAnalyticsChartService.getInnerLineChartData(),
       this.visitorsAnalyticsChartService.getOutlineLineChartData(),
       this.visitorsAnalyticsChartService.getPieChartData(),
-    )
+    ])
       .pipe(takeWhile(() => this.alive))
       .subscribe(([innerLine, outerLine, pieChartValue]: [number[], OutlineData[], number]) => {
         this.visitorsAnalyticsData = {

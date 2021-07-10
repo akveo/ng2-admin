@@ -27,17 +27,17 @@ export class TemperatureComponent implements OnDestroy {
   themeSubscription: any;
 
   constructor(private themeService: NbThemeService,
-              private temperatureHumidityService: TemperatureHumidityData) {
+    private temperatureHumidityService: TemperatureHumidityData) {
     this.themeService.getJsTheme()
       .pipe(takeWhile(() => this.alive))
       .subscribe(config => {
-      this.theme = config.variables.temperature;
-    });
+        this.theme = config.variables.temperature;
+      });
 
-    forkJoin(
+    forkJoin([
       this.temperatureHumidityService.getTemperatureData(),
       this.temperatureHumidityService.getHumidityData(),
-    )
+    ])
       .subscribe(([temperatureData, humidityData]: [Temperature, Temperature]) => {
         this.temperatureData = temperatureData;
         this.temperature = this.temperatureData.value;
