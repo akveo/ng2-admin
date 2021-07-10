@@ -10,7 +10,12 @@ export class AnalyticsService {
   private enabled: boolean;
 
   constructor(private location: Location, private router: Router) {
-    this.enabled = false;
+    this.enabled = true;
+    this.handleGaAvailability();
+  }
+
+  private handleGaAvailability() {
+    this.enabled = (typeof ga === 'function');
   }
 
   trackPageViews() {
