@@ -4,4 +4,47 @@
   nb-card {
     transform: translate3d(0, 0, 0);
   }
+
+  ::ng-deep {
+    ng2-smart-table {
+      .form-control {
+        background-color: nb-theme(input-basic-background-color);
+        border-color: nb-theme(input-basic-border-color);
+        border-style: nb-theme(input-border-style);
+        border-width: nb-theme(input-border-width);
+        color: nb-theme(input-basic-text-color);
+        font-family: nb-theme(input-text-font-family);
+
+        &::placeholder {
+          color: nb-theme(input-basic-placeholder-text-color);
+          font-family: nb-theme(input-placeholder-text-font-family);
+          text-overflow: ellipsis;
+        }
+
+        &:focus {
+          outline: none;
+          border-color: nb-theme(input-basic-focus-border-color);
+          background-color: nb-theme(input-basic-background-color);
+        }
+
+        &:hover {
+          border-color: nb-theme(input-basic-hover-border-color);
+        }
+
+        &:disabled {
+          background-color: nb-theme(input-basic-disabled-background-color);
+          border-color: nb-theme(input-basic-disabled-border-color);
+          color: nb-theme(input-basic-disabled-text-color);
+
+          &::placeholder {
+            color: nb-theme(input-basic-disabled-placeholder-text-color);
+          }
+        }
+
+        &.input-full-width {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
