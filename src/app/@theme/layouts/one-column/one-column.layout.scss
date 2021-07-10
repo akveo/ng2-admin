@@ -2,6 +2,20 @@
 @import '~bootstrap/scss/mixins/breakpoints';
 @import '~@nebular/theme/styles/global/breakpoints';
 
+::ng-deep .nb-theme-blueberry {
+  nb-layout-header nav {
+    height: 4rem;
+  }
+
+  nb-layout .layout .layout-container .content nb-layout-footer nav {
+    padding: 0.25rem 1rem;
+  }
+
+  nb-layout-header.fixed ~ .layout-container {
+    padding-top: 4rem;
+  }
+}
+
 @include nb-install-component() {
   .menu-sidebar ::ng-deep .scrollable {
     padding-top: nb-theme(layout-padding-top);

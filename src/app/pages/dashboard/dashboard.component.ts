@@ -54,6 +54,7 @@ export class DashboardComponent implements OnDestroy {
     cosmic: CardSettings[];
     corporate: CardSettings[];
     dark: CardSettings[];
+    blueberry: CardSettings[];
   } = {
     default: this.commonStatusCardsSet,
     cosmic: this.commonStatusCardsSet,
@@ -76,6 +77,7 @@ export class DashboardComponent implements OnDestroy {
       },
     ],
     dark: this.commonStatusCardsSet,
+    blueberry: this.commonStatusCardsSet,
   };
 
   constructor(private themeService: NbThemeService,
