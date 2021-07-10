@@ -74,12 +74,21 @@ export class TemperatureDraggerComponent implements AfterViewInit, OnChanges {
   pinRadius = 10;
   colors: any = [];
 
+  angle = this.bottomAngleRad / 2 + (1 - this.getValuePercentage()) * (2 * Math.PI - this.bottomAngleRad);
   styles = {
     viewBox: '0 0 300 300',
     arcTranslateStr: 'translate(0, 0)',
     clipPathStr: '',
     gradArcs: [],
-    nonSelectedArc: {},
+    nonSelectedArc: {
+      color: this.disableArcColor,
+      d: `M ${this.radius},${this.radius}
+       L ${this.radius},${3 * this.radius}
+       A ${2 * this.radius},${2 * this.radius}
+       1 ${this.angle > Math.PI ? '1' : '0'} 0
+       ${this.radius + this.radius * 2 * Math.sin(this.angle)},${this.radius + this.radius * 2 * Math.cos(this.angle)}
+       Z`,
+    },
     thumbPosition: { x: 0, y: 0 },
     blurRadius: 15,
   };
