@@ -16,7 +16,7 @@
     </nb-card>
   </div>
 
-  <div class="col-md-12 col-lg-6 col-xxxl-6">
+  <div *ngIf="secondCard.news.length" class="col-md-12 col-lg-6 col-xxxl-6">
     <nb-card>
       <nb-card-header>Window Scroll</nb-card-header>
       <nb-list

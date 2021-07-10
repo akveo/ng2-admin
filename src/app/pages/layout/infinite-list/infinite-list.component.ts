@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../news.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { NewsService } from '../news.service';
   templateUrl: 'infinite-list.component.html',
   styleUrls: ['infinite-list.component.scss'],
 })
-export class InfiniteListComponent {
+export class InfiniteListComponent implements OnInit{
 
 
   firstCard = {
@@ -24,7 +24,10 @@ export class InfiniteListComponent {
   pageSize = 10;
 
   constructor(private newsService: NewsService) {}
-
+  ngOnInit() {
+    this.loadNext(this.firstCard);
+    this.loadNext(this.secondCard);
+  }
   loadNext(cardData) {
     if (cardData.loading) { return; }
 
