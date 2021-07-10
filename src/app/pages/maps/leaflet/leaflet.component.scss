@@ -5,7 +5,9 @@
   nb-card-body {
     padding: 0;
   }
-
+  ::ng-deep .leaflet-control-zoom a {
+    text-decoration: none;
+  }
   ::ng-deep .leaflet-top, ::ng-deep .leaflet-bottom {
     z-index: 997;
   }
