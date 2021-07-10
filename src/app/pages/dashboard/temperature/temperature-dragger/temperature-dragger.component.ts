@@ -129,11 +129,8 @@ export class TemperatureDraggerComponent implements AfterViewInit, OnChanges {
     this.invalidatePinPosition();
   }
 
-  getUrlPath(id: string) {
-    const baseHref = this.locationStrategy.getBaseHref().replace(/\/$/, '');
-    const path = this.location.path().replace(/\/$/, '');
-
-    return `url(${baseHref}${path}${id}${this.svgControlId})`;
+  getUrlFragment(id: string) {
+    return `url(${id}${this.svgControlId})`;
   }
 
   private invalidate(): void {

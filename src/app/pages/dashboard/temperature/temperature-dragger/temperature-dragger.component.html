@@ -19,8 +19,8 @@
     </defs>
     <g [attr.transform]="styles.arcTranslateStr">
 
-      <g class="toClip" [attr.clip-path]="getUrlPath('#sliderClip')">
-        <g class="toFilter" [attr.filter]="getUrlPath('#blurFilter')">
+      <g class="toClip" [attr.clip-path]="getUrlFragment('#sliderClip')">
+        <g class="toFilter" [attr.filter]="getUrlFragment('#blurFilter')">
           <path [attr.d]="arc.d" [attr.fill]="off ? styles.nonSelectedArc.color : arc.color" *ngFor="let arc of styles.gradArcs"></path>
         </g>
         <!-- ngFor is a quirk fix for webkit rendering issues -->
