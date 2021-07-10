@@ -21,10 +21,6 @@ const routes: Routes = [
         component: FormLayoutsComponent,
       },
       {
-        path: 'layouts',
-        component: FormLayoutsComponent,
-      },
-      {
         path: 'buttons',
         component: ButtonsComponent,
       },
